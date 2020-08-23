@@ -1,0 +1,69 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+// @keyframes photosEntry {
+//     0% {
+//         background-image: url('/img/first_pic_comes_first.jpg'); 
+//     }
+
+//     20% {
+//         background-image: url('/img/first_pic_comes_first.jpg');   
+//     }
+    
+//     40% {
+//         background-image: url('/img/entry-3.jpg');
+//     }
+    
+//     60% {
+//         background-image: url('/img/entry-4.jpg');    
+//     }
+    
+//     80% {
+//         background-image: url('/img/entry-5.jpg');    
+//     }
+    
+//     100% {
+//         background-image: url('/img/entry-6.jpg');    
+//     }
+// }

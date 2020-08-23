@@ -1,0 +1,394 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+
+::selection {
+  color: #fff;
+  background: #0096c7ff; }
+
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); }
+
+::-webkit-scrollbar-thumb {
+  background-color: #999; }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0096c7ff; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.mr-1 {
+  margin-right: .2rem; }
+
+.mr-2 {
+  margin-right: .4rem; }
+
+.mr-3 {
+  margin-right: .6rem; }
+
+.mr-4 {
+  margin-right: .8rem; }
+
+.mr-5 {
+  margin-right: 1rem; }
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: .8rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px; }
+
+canvas {
+  display: none;
+  position: fixed;
+  top: 0; }
+
+.closebtn {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 4rem;
+  right: 6rem;
+  font-size: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color: #fff;
+  transition: all .3s; }
+  .closebtn:hover {
+    color: #0096c7ff; }
+
+.container {
+  display: grid;
+  grid-template-rows: 10rem calc(100vh - 10rem) repeat(7, min-content);
+  grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
+
+.about {
+  grid-column: 1 / -1;
+  padding: 8rem 7rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url(/img/bg-2-gws.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative; }
+  .about__heading-primary {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    word-spacing: .5rem;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%); }
+    .about__heading-primary::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .1rem;
+      background-color: #999; }
+    .about__heading-primary::before {
+      content: '';
+      display: block;
+      width: 30%;
+      height: .3rem;
+      background-color: #0096c7ff;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -.1rem; }
+  .about__content__text {
+    font-size: 1.6rem;
+    color: #333;
+    text-align: center;
+    margin-top: 1.5rem; }
+
+.entry {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/bg-1-metro.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-column: 1 / -1;
+  padding: 0 7rem;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(min-content, 14rem));
+  align-items: center;
+  justify-content: center; }
+  .entry1 {
+    padding: 4rem;
+    grid-column: 1 / span 4;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 8.3vw);
+    grid-gap: .5rem;
+    align-content: center; }
+    .entry1__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: all .3s; }
+    .entry1__item--8 {
+      grid-row: 2 / span 2;
+      grid-column: 2 / span 2; }
+  .entry2 {
+    padding: 4rem;
+    grid-column: 5 / -1; }
+    @media only screen and (max-width: 75em) {
+      .entry2 {
+        padding: 0; } }
+    .entry2__text {
+      color: #0096c7ff;
+      font-weight: 800;
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      text-align: justify;
+      letter-spacing: 1rem; }
+    .entry2__letter {
+      display: inline-block;
+      letter-spacing: 0.5rem; }
+
+.header {
+  grid-column: 1 / -1;
+  padding: 1.5rem 6rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      padding: 2rem 2rem; } }
+  .header__logo {
+    cursor: pointer;
+    height: 7rem;
+    width: 15rem; }
+    .header__logo:hover {
+      outline: 0.4rem solid #fff;
+      outline-offset: .6rem;
+      transition: all .3s; }
+  .header__navigation {
+    list-style: none;
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .header__navigation {
+        display: none; } }
+    .header__navigation__item {
+      transition: all .2s; }
+      .header__navigation__item::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: .2rem;
+        background-color: #0096c7ff;
+        transition: all .4s;
+        transform: scaleX(0);
+        transform-origin: left; }
+      .header__navigation__item:hover {
+        transform: translateY(-0.2rem); }
+        .header__navigation__item:hover::after {
+          transform: scaleX(1);
+          transform-origin: left; }
+    .header__navigation__link {
+      text-decoration: none;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      color: white;
+      font-weight: 700;
+      white-space: nowrap;
+      text-transform: uppercase; }
+  .header__buttons {
+    position: relative; }
+    .header__buttons__fire {
+      color: white;
+      transition: all .5s;
+      background-image: linear-gradient(120deg, #0096c7ff 0%, #0096c7ff 50%, #fff 50%);
+      background-size: 220%; }
+      @media only screen and (max-width: 56.25em) {
+        .header__buttons__fire {
+          display: none; } }
+      .header__buttons__fire:hover {
+        color: black;
+        background-position: 100%; }
+    .header__buttons__hamburger {
+      cursor: pointer;
+      display: none; }
+      @media only screen and (max-width: 56.25em) {
+        .header__buttons__hamburger {
+          display: block; } }
+      .header__buttons__hamburger__line1 {
+        width: 3.5rem;
+        height: .35rem;
+        background-color: #fff;
+        border-radius: 2rem;
+        margin: .5rem 0; }
+      .header__buttons__hamburger__line2 {
+        width: 3.5rem;
+        height: .35rem;
+        background-color: #fff;
+        border-radius: 2rem;
+        margin: .5rem 0; }
+      .header__buttons__hamburger__line3 {
+        width: 3.5rem;
+        height: .35rem;
+        background-color: #fff;
+        border-radius: 2rem;
+        margin: .5rem 0; }
+
+.birthTimer__title {
+  background-color: black;
+  grid-column: full-start / col-end 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0; }
+  .birthTimer__title__heading {
+    color: white;
+    line-height: 1.1;
+    font-size: 7rem;
+    font-family: "Dancing Script", cursive;
+    background: linear-gradient(270deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
+.birthTimer__time {
+  background: linear-gradient(90deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
+  grid-column: col-start 4 / full-end; }
+  .birthTimer__time__timer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .birthTimer__time__timer__heading__main {
+      padding-top: 3rem;
+      font-family: "Dancing Script", cursive;
+      color: #000;
+      font-size: 4rem;
+      white-space: nowrap; }
+      .birthTimer__time__timer__heading__main__heart {
+        color: red; }
+    .birthTimer__time__timer__content {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      .birthTimer__time__timer__content__box {
+        background: #fff;
+        padding: 2rem 3rem;
+        font-family: "Schoolbell", cursive;
+        color: #000;
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 1rem;
+        background: linear-gradient(to bottom, #64b3f4, #c2e59c);
+        -webkit-box-reflect: below 0 linear-gradient(transparent, #0008); }
+      .birthTimer__time__timer__content__box:not(:last-child) {
+        margin-right: 1rem; }
+      .birthTimer__time__timer__content__box:last-child {
+        color: #fff; }

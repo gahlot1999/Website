@@ -1,0 +1,128 @@
+.header {
+    grid-column: 1 / -1;
+    padding: 1.5rem 6rem;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    @include respond(tab-port) {
+        padding: 2rem 2rem;
+    }
+
+    &__logo {
+        cursor: pointer;
+        height: 7rem;
+        width: 15rem;
+        
+        &:hover {
+            outline: .4rem solid $color-white;
+            outline-offset: .6rem;
+            transition: all .3s;
+        }
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: $color-black;
+
+    &__navigation {
+        list-style: none;
+        flex: 0 0 45%;
+
+
+        @include respond(tab-port) {
+            display: none;
+        }
+        
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+            transition: all .2s;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: .2rem;
+                background-color: $blue-green;
+                transition: all .4s;
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+
+            &:hover {
+                transform: translateY(-.2rem);
+                &::after {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }            
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: 700;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+    }
+
+    &__buttons {
+        position: relative;
+        &__fire {
+
+            color: white;
+            transition: all .5s;
+            background-image: linear-gradient(120deg, $blue-green 0%, $blue-green 50%, $color-white 50%);
+            background-size: 220%;
+
+            @include respond(tab-port) {
+                display: none;
+            }
+
+            &:hover {
+                color: black;
+                background-position: 100%;
+            }
+
+        }
+
+        &__hamburger {
+            cursor: pointer;
+            display: none;
+
+            @include respond(tab-port) {
+                display: block;
+            }
+
+            &__line1 {
+                width: 3.5rem;
+                height: .35rem;
+                background-color: $color-white;
+                border-radius: 2rem;
+                margin: .5rem 0;
+            }
+
+            &__line2 {
+                width: 3.5rem;
+                height: .35rem;
+                background-color: $color-white;
+                border-radius: 2rem;
+                margin: .5rem 0;
+            }
+
+            &__line3 {
+                width: 3.5rem;
+                height: .35rem;
+                background-color: $color-white;
+                border-radius: 2rem;
+                margin: .5rem 0;
+            }
+        }
+    }
+}
