@@ -329,7 +329,7 @@ canvas {
       border-radius: .3rem; }
       @media only screen and (max-width: 37.5em) {
         .card__front img {
-          width: 100%; } }
+          width: 35rem; } }
   .card__back {
     transform: rotateY(180deg); }
   .card__front, .card__back {
