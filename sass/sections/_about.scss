@@ -1,11 +1,15 @@
 .about {
     grid-column: 1 / -1;
-    min-height: 100vh;
-    padding: 6rem 7rem;
+    height: min-content;
+    padding: 5rem 7rem;
     background: linear-gradient(to right bottom, rgba(255,255,255,.8) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,.6) 100%), url(/img/bg-2-gws.jpg);
     background-repeat: none;
     background-size: cover;
-    background-position: center;    
+    background-position: center;
+
+    @include respond(phone) {
+        padding: 2rem 3rem;
+    }
 
     &__heading {
         &-primary {
@@ -45,7 +49,7 @@
 
     &__content {
         &__text {
-            font-size: 1.6rem;
+            font-size: 2rem;
             color: $color-grey-dark-3;
             text-align: center;
             margin-top: 1.8rem;
@@ -60,7 +64,7 @@
     grid-row-gap: 3rem;
     grid-column-gap: 6rem;
     justify-items: center;
-        
+    align-content: center;
 }
 
 .card {
@@ -80,16 +84,11 @@
     }
 
     &__front {
-        color: black;
+        box-shadow: .3rem .3rem .5rem rgba($color-black, .4);
 
         img {
             height: 30rem;
             width: 25rem;
-            border-radius: .3rem;
-
-            @include respond(phone) {
-                width: 35rem;
-            }
         }
     }
 

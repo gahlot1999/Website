@@ -6,22 +6,51 @@
     align-items: center;
     padding: 3rem 0;
 
-    &__heading {
-        color: white;
-        line-height: 1.1;
-        font-size: 7rem;
-        font-family: $font-family-2;
+    @include respond(phone) {
+        grid-column: full-start / full-end;
+        padding: 1rem 0;
+    }
 
+    &__phone {
+        display: none;
+        line-height: 1;
+        padding: 1rem 0;
+        font-size: 4rem;
+        text-align: center;
+        font-family: $font-family-2;
         background: $gradient-left;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include respond(phone) {
+            display: block;
+        }
+    }
+
+    &__heading {
+        line-height: 1.1;
+        font-size: 7rem;
+        font-family: $font-family-2;
+        background: $gradient-left;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 }
 
 .birthTimer__time {
     background: $gradient-right;
     grid-column: col-start 4 / full-end;
+
+    @include respond(phone) {
+        grid-column: full-start / full-end;
+        padding: 1rem 0;
+    }
 
     &__timer {
         height: 100%;
@@ -36,6 +65,11 @@
                 color: $color-black;
                 font-size: 4rem;
                 // white-space: nowrap;
+
+                @include respond(phone) {
+                    padding-top: 0;
+                    text-align: center;
+                }
 
                 &__heart {
                     color: red;
@@ -59,8 +93,12 @@
                 text-align: center;
                 margin-top: 1rem;
                 background: linear-gradient(to bottom, #64b3f4, #c2e59c);
-                -webkit-box-reflect: below 0 
-                linear-gradient(transparent, #0008);
+                -webkit-box-reflect: below 0 linear-gradient(transparent, #0008);
+
+                @include respond(phone) {
+                    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent);
+                    margin-top: 2rem;
+                }
             }
 
             &__box:not(:last-child) {

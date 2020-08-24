@@ -160,6 +160,11 @@ canvas {
   display: grid;
   grid-template-rows: 10rem calc(100vh - 10rem) min-content min-content repeat(7, min-content);
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      display: grid;
+      grid-template-rows: 10rem min-content min-content min-content repeat(7, min-content);
+      grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; } }
 
 .navigation__button {
   cursor: pointer;
@@ -260,12 +265,15 @@ canvas {
 
 .about {
   grid-column: 1 / -1;
-  min-height: 100vh;
-  padding: 6rem 7rem;
+  height: min-content;
+  padding: 5rem 7rem;
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.6) 100%), url(/img/bg-2-gws.jpg);
   background-repeat: none;
   background-size: cover;
   background-position: center; }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      padding: 2rem 3rem; } }
   .about__heading-primary {
     color: #000;
     text-transform: uppercase;
@@ -295,7 +303,7 @@ canvas {
       transform: translateX(-50%);
       bottom: -.1rem; }
   .about__content__text {
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #333;
     text-align: center;
     margin-top: 1.8rem;
@@ -306,7 +314,8 @@ canvas {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-row-gap: 3rem;
   grid-column-gap: 6rem;
-  justify-items: center; }
+  justify-items: center;
+  align-content: center; }
 
 .card {
   background-color: transparent;
@@ -322,14 +331,10 @@ canvas {
     transition: transform 0.6s;
     transform-style: preserve-3d; }
   .card__front {
-    color: black; }
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4); }
     .card__front img {
       height: 30rem;
-      width: 25rem;
-      border-radius: .3rem; }
-      @media only screen and (max-width: 37.5em) {
-        .card__front img {
-          width: 35rem; } }
+      width: 25rem; }
   .card__back {
     transform: rotateY(180deg); }
   .card__front, .card__back {
@@ -348,8 +353,25 @@ canvas {
   flex-direction: column;
   align-items: center;
   padding: 3rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .birthTimer__title {
+      grid-column: full-start / full-end;
+      padding: 1rem 0; } }
+  .birthTimer__title__phone {
+    display: none;
+    line-height: 1;
+    padding: 1rem 0;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    background: linear-gradient(270deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+    @media only screen and (max-width: 37.5em) {
+      .birthTimer__title__phone {
+        display: block; } }
   .birthTimer__title__heading {
-    color: white;
     line-height: 1.1;
     font-size: 7rem;
     font-family: "Dancing Script", cursive;
@@ -357,10 +379,17 @@ canvas {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+    @media only screen and (max-width: 37.5em) {
+      .birthTimer__title__heading {
+        display: none; } }
 
 .birthTimer__time {
   background: linear-gradient(90deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
   grid-column: col-start 4 / full-end; }
+  @media only screen and (max-width: 37.5em) {
+    .birthTimer__time {
+      grid-column: full-start / full-end;
+      padding: 1rem 0; } }
   .birthTimer__time__timer {
     height: 100%;
     display: flex;
@@ -371,6 +400,10 @@ canvas {
       font-family: "Dancing Script", cursive;
       color: #000;
       font-size: 4rem; }
+      @media only screen and (max-width: 37.5em) {
+        .birthTimer__time__timer__heading__main {
+          padding-top: 0;
+          text-align: center; } }
       .birthTimer__time__timer__heading__main__heart {
         color: red; }
     .birthTimer__time__timer__content {
@@ -389,6 +422,10 @@ canvas {
         margin-top: 1rem;
         background: linear-gradient(to bottom, #64b3f4, #c2e59c);
         -webkit-box-reflect: below 0 linear-gradient(transparent, #0008); }
+        @media only screen and (max-width: 37.5em) {
+          .birthTimer__time__timer__content__box {
+            -webkit-box-reflect: below 0 linear-gradient(transparent, transparent);
+            margin-top: 2rem; } }
       .birthTimer__time__timer__content__box:not(:last-child) {
         margin-right: 1rem; }
       .birthTimer__time__timer__content__box:last-child {
@@ -404,6 +441,9 @@ canvas {
   grid-template-columns: repeat(10, minmax(min-content, 14rem));
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .entry {
+      padding: 0 3rem; } }
   .entry1 {
     padding: 4rem;
     grid-column: 1 / span 4;
@@ -413,6 +453,11 @@ canvas {
     grid-template-rows: repeat(4, 8.3vw);
     grid-gap: .5rem;
     align-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .entry1 {
+        grid-column: 1 / -1;
+        padding: 4rem 2rem;
+        grid-template-rows: repeat(4, 20vw); } }
     .entry1__img {
       width: 100%;
       height: 100%;
@@ -428,6 +473,10 @@ canvas {
     @media only screen and (max-width: 75em) {
       .entry2 {
         padding: 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .entry2 {
+        padding: 0 0 3rem 0;
+        grid-column: 1 / -1; } }
     .entry2__text {
       color: #0096c7ff;
       font-weight: 800;

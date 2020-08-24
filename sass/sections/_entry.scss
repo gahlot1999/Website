@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: center;
 
+    @include respond(phone) {
+        padding: 0 3rem;
+    }
+
     &1 {
         padding: 4rem;
         grid-column: 1 / span 4;
@@ -21,6 +25,12 @@
         grid-template-rows: repeat(4, 8.3vw);
         grid-gap: .5rem;
         align-content: center;
+
+        @include respond(phone) {
+            grid-column: 1 / -1;
+            padding: 4rem 2rem;
+            grid-template-rows: repeat(4, 20vw);
+        }
 
         &__img {
             width: 100%;
@@ -44,6 +54,11 @@
 
         @include respond(tab-land) { 
             padding: 0;
+        }
+
+        @include respond(phone) {
+            padding: 0 0 3rem 0;
+            grid-column: 1 / -1;
         }
     
         &__text {

@@ -2,4 +2,11 @@
     display: grid;
     grid-template-rows: 10rem calc(100vh - 10rem) min-content min-content repeat(7, min-content);
     grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+
+    @include respond(phone) {
+        display: grid;
+        grid-template-rows: 10rem min-content min-content min-content repeat(7, min-content);
+        grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+
+    }
 }
