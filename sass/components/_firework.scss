@@ -2,6 +2,7 @@ canvas {
     display: none;
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 
 .closebtn {
@@ -15,6 +16,7 @@ canvas {
     font-weight: 700;
     color: $color-white;
     transition: all .3s;
+    z-index: 101;
 
     &:hover {
         color: $blue-green;

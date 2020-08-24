@@ -280,6 +280,7 @@ const line3 = document.querySelector('.navigation__button  .navigation__button__
 document.addEventListener('click', function (event) {
 	if (event.target.closest('.navigation__list__mobile__link')) {
     naviList.classList.toggle("opacity");
+    naviList.classList.toggle("display");
     line1.classList.toggle("line1");
     line2.classList.toggle("line2");
     line3.classList.toggle("line3");
@@ -288,6 +289,7 @@ document.addEventListener('click', function (event) {
 
 document.querySelector('.navigation__button').addEventListener('click', function(){
   naviList.classList.toggle("opacity");
+  naviList.classList.toggle("display");
   line1.classList.toggle("line1");
   line2.classList.toggle("line2");
   line3.classList.toggle("line3");
@@ -295,6 +297,7 @@ document.querySelector('.navigation__button').addEventListener('click', function
 
 document.querySelector('.navigation__list__mobile__button').addEventListener('click', function(){
  naviList.classList.toggle("opacity");
+ naviList.classList.toggle("display");
   line1.classList.toggle("line1");
   line2.classList.toggle("line2");
   line3.classList.toggle("line3");

@@ -36,7 +36,7 @@
     }
 
     &__list {
-        display: block;
+        display: none;
         height: 45vh;
         width: 100%;
         background-color: rgba($color-black, .9);
@@ -50,6 +50,7 @@
         z-index: 1;
 
         &__mobile {
+            width: 50%;
             position: absolute;
             top: 45%;
             left: 50%;
@@ -70,7 +71,7 @@
             }
 
             &__link {
-                padding: .5rem 5rem;
+                width: 100%;
                 font-family: $font-family;
                 color: $color-white;
                 text-decoration: none;
@@ -80,18 +81,22 @@
             &__button {
                 cursor: pointer;
                 white-space: nowrap;
+                text-align: center;
                 font-size: 1.8rem;
                 padding: .4rem 6rem;
                 border-radius: 10rem;
                 border: none;
                 outline: none;
-                margin-top: .6rem;
+                margin-top: 1rem;
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
                 transition: all .3s;
 
                 &:hover {
+                    color: $color-white;
+                    background: rgb(131,58,180);
+                    background: linear-gradient(135deg, rgba(131,58,180,1) 0%, rgba(160,51,144,1) 0%, rgba(253,76,42,1) 50%, rgba(252,176,69,1) 100%);
                     transform: translate(-50%, -.2rem);
                 }
             }
@@ -101,6 +106,10 @@
 /*TOGGLE CLASSES*/
 .opacity {
     opacity: 1;
+}
+
+.display {
+    display: block;
 }
 
 .line1 {
