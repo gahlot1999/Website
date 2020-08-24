@@ -40,14 +40,20 @@
                 </ul>
                 <div class="header__buttons">
                     <button class="btn header__buttons__fire" onclick="fireworkActivate()">Click Me</button>
-                    <div class="header__buttons__hamburger" onclick="hamburger()">
-                        <div class="header__buttons__hamburger__line1"></div>
-                        <div class="header__buttons__hamburger__line2"></div>
-                        <div class="header__buttons__hamburger__line3"></div>
-                    </div>
+                    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+                    <label for="navi-toggle" class="navigation__button">
+                        <div class="navigation__button__line1"></div>
+                        <div class="navigation__button__line2"></div>
+                        <div class="navigation__button__line3"></div>
+                    </label>
+                    <nav class="navigation__list">
+            
+                    </nav>
                 </div>
             </section>
             <!--====END OF HEADER SECTION======-->
+
+            
 
             <!--====ENTRY SECTION======-->
             <section class="entry">
@@ -126,6 +132,7 @@
             <section class="about" id="about">
                 <div class="about__heading"><h2 class="about__heading-primary">About Us</h2></div>
                 <div class="about__content"><p class="about__content__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, mollitia omnis esse ipsa eveniet corporis, repellendus temporibus deserunt laboriosam fugit inventore nisi quod est quibusdam qui. Eaque quo recusandae error, corporis cum esse adipisci excepturi possimus ut quos incidunt ea voluptate rem sequi modi quae quibusdam nisi. Beatae quasi laudantium doloribus ratione amet expedita est, consequatur vel tenetur nemo sint molestiae! Odio atque tenetur iusto nostrum, voluptates consectetur esse mollitia?</p></div>
+
             </section>
 
             <!--==========END OF ABOUT US SECTION========-->
@@ -139,6 +146,9 @@
         </main>
 
         
+        <!--====MOBILE NAVIGATION SECTION======-->
+        
+        <!--====END OF MOBILE NAVIGATION SECTION======-->
 
         <canvas id="birthday"></canvas>
         <div class="closebtn" onclick="fireworkDeactivate()">X</div>

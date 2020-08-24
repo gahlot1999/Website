@@ -51,8 +51,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-sizing: inherit; }
 
 html {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
     html {
@@ -161,14 +159,64 @@ canvas {
   grid-template-rows: 10rem calc(100vh - 10rem) repeat(7, min-content);
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
 
+.navigation__list {
+  display: block;
+  height: 50vh;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 2rem;
+  position: fixed;
+  z-index: 999;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10rem);
+  opacity: 0;
+  transition: all .4s; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__checkbox:checked ~ .navigation__list {
+  display: block;
+  opacity: 1;
+  width: 80%;
+  transform: translateX(-50%) translateY(0rem); }
+
+.navigation__button {
+  cursor: pointer;
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__button {
+      display: block; } }
+  .navigation__button__line1 {
+    width: 3.5rem;
+    height: .35rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    margin: .5rem 0; }
+  .navigation__button__line2 {
+    width: 3.5rem;
+    height: .35rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    margin: .5rem 0; }
+  .navigation__button__line3 {
+    width: 3.5rem;
+    height: .35rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    margin: .5rem 0; }
+
 .about {
   grid-column: 1 / -1;
   height: 100vh;
   padding: 8rem 7rem;
   background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url(/img/bg-2-gws.jpg);
+  background-clip: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
   background-repeat: none;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
   .about__heading-primary {
     color: #000;
     text-transform: uppercase;
@@ -314,30 +362,6 @@ canvas {
       .header__buttons__fire:hover {
         color: black;
         background-position: 100%; }
-    .header__buttons__hamburger {
-      cursor: pointer;
-      display: none; }
-      @media only screen and (max-width: 56.25em) {
-        .header__buttons__hamburger {
-          display: block; } }
-      .header__buttons__hamburger__line1 {
-        width: 3.5rem;
-        height: .35rem;
-        background-color: #fff;
-        border-radius: 2rem;
-        margin: .5rem 0; }
-      .header__buttons__hamburger__line2 {
-        width: 3.5rem;
-        height: .35rem;
-        background-color: #fff;
-        border-radius: 2rem;
-        margin: .5rem 0; }
-      .header__buttons__hamburger__line3 {
-        width: 3.5rem;
-        height: .35rem;
-        background-color: #fff;
-        border-radius: 2rem;
-        margin: .5rem 0; }
 
 .birthTimer__title {
   background-color: black;

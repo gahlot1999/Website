@@ -91,38 +91,5 @@
             }
 
         }
-
-        &__hamburger {
-            cursor: pointer;
-            display: none;
-
-            @include respond(tab-port) {
-                display: block;
-            }
-
-            &__line1 {
-                width: 3.5rem;
-                height: .35rem;
-                background-color: $color-white;
-                border-radius: 2rem;
-                margin: .5rem 0;
-            }
-
-            &__line2 {
-                width: 3.5rem;
-                height: .35rem;
-                background-color: $color-white;
-                border-radius: 2rem;
-                margin: .5rem 0;
-            }
-
-            &__line3 {
-                width: 3.5rem;
-                height: .35rem;
-                background-color: $color-white;
-                border-radius: 2rem;
-                margin: .5rem 0;
-            }
-        }
     }
 }

@@ -1,0 +1,61 @@
+.navigation {
+
+    &__list {
+        display: block;
+        height: 50vh;
+        width: 80%;
+        background-color: $color-white;
+        border-radius: 2rem;
+        position: fixed;
+        z-index: 999;
+        top: 10rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10rem);
+        opacity: 0;
+        transition: all .4s;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked ~ &__list {
+        display: block;
+        opacity: 1;
+        width: 80%;
+        transform: translateX(-50%) translateY(0rem);
+    }
+
+    &__button {
+        cursor: pointer;
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+        }
+
+        &__line1 {
+            width: 3.5rem;
+            height: .35rem;
+            background-color: $color-white;
+            border-radius: 2rem;
+            margin: .5rem 0;
+        }
+    
+        &__line2 {
+            width: 3.5rem;
+            height: .35rem;
+            background-color: $color-white;
+            border-radius: 2rem;
+            margin: .5rem 0;
+        }
+    
+        &__line3 {
+            width: 3.5rem;
+            height: .35rem;
+            background-color: $color-white;
+            border-radius: 2rem;
+            margin: .5rem 0;
+        }
+    }
+}
