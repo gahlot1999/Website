@@ -204,7 +204,7 @@ canvas {
 
 .navigation__list {
   display: block;
-  height: 60vh;
+  height: 45vh;
   width: 100%;
   background-color: #000;
   border-radius: 1rem;
@@ -234,6 +234,7 @@ canvas {
         transform: translateY(-0.5rem); }
     .navigation__list__mobile__button {
       cursor: pointer;
+      white-space: nowrap;
       font-size: 1.8rem;
       padding: .4rem 6rem;
       border-radius: 10rem;

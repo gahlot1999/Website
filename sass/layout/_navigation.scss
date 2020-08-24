@@ -60,7 +60,7 @@
 
     &__list {
         display: block;
-        height: 60vh;
+        height: 45vh;
         width: 100%;
         background-color: $color-black;
         border-radius: 1rem;
@@ -96,6 +96,7 @@
 
             &__button {
                 cursor: pointer;
+                white-space: nowrap;
                 font-size: 1.8rem;
                 padding: .4rem 6rem;
                 border-radius: 10rem;
