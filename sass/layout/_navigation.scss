@@ -1,28 +1,5 @@
 .navigation {
 
-    &__checkbox {
-        display: none;
-    }
-
-    &__checkbox:checked ~ &__list {
-        opacity: 1;
-        width: 100%;
-        transform: translateX(-50%) translateY(0rem);
-    }
-
-    &__checkbox:checked ~ .navigation__button  .navigation__button__line1 {
-        transform: rotate(405deg) translate(-.5rem, 1.05rem) scale(.85);
-    }
-
-    &__checkbox:checked ~ .navigation__button .navigation__button__line2 {
-        display: none;
-    }
-
-    &__checkbox:checked ~ .navigation__button .navigation__button__line3 {
-        transform: rotate(-405deg) translate(-.5rem, -1.05rem) scale(.85);
-    }
-
-
     &__button {
         cursor: pointer;
         display: none;
@@ -62,8 +39,7 @@
         display: block;
         height: 45vh;
         width: 100%;
-        background-color: $color-black;
-        border-radius: 1rem;
+        background-color: rgba($color-black, .9);
         position: fixed;
         z-index: 999;
         top: 10rem;
@@ -81,7 +57,6 @@
 
             &__item {
                 cursor: pointer;
-                padding: .5rem 5rem;
                 list-style: none;
                 margin-bottom: 1rem;
                 text-align: center;
@@ -92,6 +67,14 @@
                     background-color: $color-grey-dark-2;
                     transform: translateY(-.5rem);
                 }
+            }
+
+            &__link {
+                padding: .5rem 5rem;
+                font-family: $font-family;
+                color: $color-white;
+                text-decoration: none;
+                font-size: 2rem;
             }
 
             &__button {
@@ -112,13 +95,22 @@
                     transform: translate(-50%, -.2rem);
                 }
             }
-
-            &__link {
-                font-family: $font-family;
-                color: $color-white;
-                text-decoration: none;
-                font-size: 2rem;
-            }
         }
     }
+}
+/*TOGGLE CLASSES*/
+.opacity {
+    opacity: 1;
+}
+
+.line1 {
+    transform: rotate(405deg) translate(-.5rem, 1.05rem) scale(.85);
+}
+
+.line2 {
+    display: none;
+}
+
+.line3 {
+    transform: rotate(-405deg) translate(-.5rem, -1.05rem) scale(.85);
 }

@@ -159,23 +159,6 @@ canvas {
   grid-template-rows: 10rem calc(100vh - 10rem) repeat(7, min-content);
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end]; }
 
-.navigation__checkbox {
-  display: none; }
-
-.navigation__checkbox:checked ~ .navigation__list {
-  opacity: 1;
-  width: 100%;
-  transform: translateX(-50%) translateY(0rem); }
-
-.navigation__checkbox:checked ~ .navigation__button .navigation__button__line1 {
-  transform: rotate(405deg) translate(-0.5rem, 1.05rem) scale(0.85); }
-
-.navigation__checkbox:checked ~ .navigation__button .navigation__button__line2 {
-  display: none; }
-
-.navigation__checkbox:checked ~ .navigation__button .navigation__button__line3 {
-  transform: rotate(-405deg) translate(-0.5rem, -1.05rem) scale(0.85); }
-
 .navigation__button {
   cursor: pointer;
   display: none; }
@@ -206,8 +189,7 @@ canvas {
   display: block;
   height: 45vh;
   width: 100%;
-  background-color: #000;
-  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   z-index: 999;
   top: 10rem;
@@ -223,7 +205,6 @@ canvas {
     transform: translate(-50%, -50%); }
     .navigation__list__mobile__item {
       cursor: pointer;
-      padding: .5rem 5rem;
       list-style: none;
       margin-bottom: 1rem;
       text-align: center;
@@ -232,6 +213,12 @@ canvas {
       .navigation__list__mobile__item:hover {
         background-color: #999;
         transform: translateY(-0.5rem); }
+    .navigation__list__mobile__link {
+      padding: .5rem 5rem;
+      font-family: "Lato", sans-serif;
+      color: #fff;
+      text-decoration: none;
+      font-size: 2rem; }
     .navigation__list__mobile__button {
       cursor: pointer;
       white-space: nowrap;
@@ -247,11 +234,19 @@ canvas {
       transition: all .3s; }
       .navigation__list__mobile__button:hover {
         transform: translate(-50%, -0.2rem); }
-    .navigation__list__mobile__link {
-      font-family: "Lato", sans-serif;
-      color: #fff;
-      text-decoration: none;
-      font-size: 2rem; }
+
+/*TOGGLE CLASSES*/
+.opacity {
+  opacity: 1; }
+
+.line1 {
+  transform: rotate(405deg) translate(-0.5rem, 1.05rem) scale(0.85); }
+
+.line2 {
+  display: none; }
+
+.line3 {
+  transform: rotate(-405deg) translate(-0.5rem, -1.05rem) scale(0.85); }
 
 .about {
   grid-column: 1 / -1;
@@ -296,6 +291,59 @@ canvas {
     color: #333;
     text-align: center;
     margin-top: 1.5rem; }
+
+.birthTimer__title {
+  background-color: black;
+  grid-column: full-start / col-end 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0; }
+  .birthTimer__title__heading {
+    color: white;
+    line-height: 1.1;
+    font-size: 7rem;
+    font-family: "Dancing Script", cursive;
+    background: linear-gradient(270deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
+.birthTimer__time {
+  background: linear-gradient(90deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
+  grid-column: col-start 4 / full-end; }
+  .birthTimer__time__timer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .birthTimer__time__timer__heading__main {
+      padding-top: 3rem;
+      font-family: "Dancing Script", cursive;
+      color: #000;
+      font-size: 4rem; }
+      .birthTimer__time__timer__heading__main__heart {
+        color: red; }
+    .birthTimer__time__timer__content {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; }
+      .birthTimer__time__timer__content__box {
+        background: #fff;
+        padding: 2rem 3rem;
+        font-family: "Schoolbell", cursive;
+        color: #000;
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 1rem;
+        background: linear-gradient(to bottom, #64b3f4, #c2e59c);
+        -webkit-box-reflect: below 0 linear-gradient(transparent, #0008); }
+      .birthTimer__time__timer__content__box:not(:last-child) {
+        margin-right: 1rem; }
+      .birthTimer__time__timer__content__box:last-child {
+        color: #fff; }
 
 .entry {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/bg-1-metro.jpg);
@@ -408,56 +456,3 @@ canvas {
       .header__buttons__fire:hover {
         color: black;
         background-position: 100%; }
-
-.birthTimer__title {
-  background-color: black;
-  grid-column: full-start / col-end 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 0; }
-  .birthTimer__title__heading {
-    color: white;
-    line-height: 1.1;
-    font-size: 7rem;
-    font-family: "Dancing Script", cursive;
-    background: linear-gradient(270deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-
-.birthTimer__time {
-  background: linear-gradient(90deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
-  grid-column: col-start 4 / full-end; }
-  .birthTimer__time__timer {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .birthTimer__time__timer__heading__main {
-      padding-top: 3rem;
-      font-family: "Dancing Script", cursive;
-      color: #000;
-      font-size: 4rem; }
-      .birthTimer__time__timer__heading__main__heart {
-        color: red; }
-    .birthTimer__time__timer__content {
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around; }
-      .birthTimer__time__timer__content__box {
-        background: #fff;
-        padding: 2rem 3rem;
-        font-family: "Schoolbell", cursive;
-        color: #000;
-        font-size: 3rem;
-        text-align: center;
-        margin-top: 1rem;
-        background: linear-gradient(to bottom, #64b3f4, #c2e59c);
-        -webkit-box-reflect: below 0 linear-gradient(transparent, #0008); }
-      .birthTimer__time__timer__content__box:not(:last-child) {
-        margin-right: 1rem; }
-      .birthTimer__time__timer__content__box:last-child {
-        color: #fff; }

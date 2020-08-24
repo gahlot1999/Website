@@ -272,6 +272,31 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 /*=====================MOBILE NAVIGATION======================*/
 /*============================================================*/
 
-function hamburger() {
-  document.querySelector('.navigation').style.display = "block";
-}
+const naviList = document.querySelector('.navigation__list');
+const line1 = document.querySelector('.navigation__button  .navigation__button__line1');
+const line2 = document.querySelector('.navigation__button  .navigation__button__line2');
+const line3 = document.querySelector('.navigation__button  .navigation__button__line3');
+
+document.addEventListener('click', function (event) {
+	if (event.target.closest('.navigation__list__mobile__link')) {
+    naviList.classList.toggle("opacity");
+    line1.classList.toggle("line1");
+    line2.classList.toggle("line2");
+    line3.classList.toggle("line3");
+  }
+}, false);
+
+document.querySelector('.navigation__button').addEventListener('click', function(){
+  naviList.classList.toggle("opacity");
+  line1.classList.toggle("line1");
+  line2.classList.toggle("line2");
+  line3.classList.toggle("line3");
+});
+
+document.querySelector('.navigation__list__mobile__button').addEventListener('click', function(){
+ naviList.classList.toggle("opacity");
+  line1.classList.toggle("line1");
+  line2.classList.toggle("line2");
+  line3.classList.toggle("line3");
+});
+
