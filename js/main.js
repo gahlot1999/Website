@@ -303,3 +303,14 @@ document.querySelector('.navigation__list__mobile__button').addEventListener('cl
   line3.classList.toggle("line3");
 });
 
+/*============================================================*/
+/*=======================PRE LOADER===========================*/
+/*============================================================*/
+
+$(window).on('load', function() {
+  if ($('#preloader').length) {
+    $('#preloader').delay(300).fadeOut('slow', function() {
+      $(this).remove();
+    });
+  }
+});
