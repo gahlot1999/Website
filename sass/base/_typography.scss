@@ -5,3 +5,39 @@ body {
     line-height: 1.7;
     color: $color-grey-dark;
 }
+
+.heading {
+    &__primary {
+        color: $color-black;
+        text-transform: uppercase;
+        font-size: 3.2rem;
+        font-weight: 900;
+        letter-spacing: .5rem;
+        word-spacing: .5rem;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: .1rem;
+            background-color: $color-grey-dark-2;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 30%;
+            height: .3rem;
+            background-color: $blue-green;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -.1rem;
+        }
+    }
+}

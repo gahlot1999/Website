@@ -91,6 +91,35 @@ body {
   line-height: 1.7;
   color: #777; }
 
+.heading__primary {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: .5rem;
+  word-spacing: .5rem;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%); }
+  .heading__primary::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .1rem;
+    background-color: #999; }
+  .heading__primary::before {
+    content: '';
+    display: block;
+    width: 30%;
+    height: .3rem;
+    background-color: #0096c7ff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -.1rem; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -123,40 +152,6 @@ body {
 
 .mr-5 {
   margin-right: 1rem; }
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff; }
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border-top: 6px solid #0096c7ff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite; }
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
 
 .btn {
   cursor: pointer;
@@ -308,36 +303,8 @@ canvas {
   @media only screen and (max-width: 37.5em) {
     .about {
       padding: 5rem 3rem; } }
-  .about__heading-primary {
-    color: #000;
-    text-transform: uppercase;
-    font-size: 3.2rem;
-    font-weight: 900;
-    letter-spacing: .5rem;
-    word-spacing: .5rem;
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%); }
-    .about__heading-primary::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: .1rem;
-      background-color: #999; }
-    .about__heading-primary::before {
-      content: '';
-      display: block;
-      width: 30%;
-      height: .3rem;
-      background-color: #0096c7ff;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -.1rem; }
   .about__content__text {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #333;
     text-align: center;
     margin-top: 1.8rem;
@@ -352,6 +319,7 @@ canvas {
   align-content: center; }
 
 .card {
+  cursor: pointer;
   background-color: transparent;
   width: 25rem;
   height: 30rem;
@@ -369,6 +337,8 @@ canvas {
       height: 30rem;
       width: 25rem; }
   .card__back {
+    background: #c9c9c9;
+    background: linear-gradient(125deg, rgba(201, 201, 201, 0.65) 0%, rgba(219, 219, 219, 0.65) 50%, rgba(209, 209, 209, 0.65) 100%);
     transform: rotateY(180deg); }
   .card__front, .card__back {
     position: absolute;
@@ -463,6 +433,105 @@ canvas {
         margin-right: 1rem; }
       .birthTimer__time__timer__content__box:last-child {
         color: #fff; }
+
+.dates {
+  grid-column: 1 / -1;
+  position: relative;
+  background: linear-gradient(135deg, white 0%, white 50%, rgba(155, 214, 139, 0.8) 50%, rgba(114, 196, 175, 0.8) 100%), url(/img/dates-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  @media only screen and (max-width: 37.5em) {
+    .dates {
+      padding: 3rem 0; } }
+  .dates > h2 {
+    margin-top: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .dates > h2 {
+        margin-top: 0rem;
+        margin-bottom: 3rem; } }
+  .dates__subheading {
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    transform: skewX(10deg);
+    background: linear-gradient(125deg, #92d4c3 0%, #a2d491 50%, #c6daa3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .dates__container {
+    padding: 3rem 20rem;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(3, 16rem);
+    grid-column-gap: 15rem;
+    grid-row-gap: 2rem;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .dates__container {
+        grid-column-gap: 4rem;
+        padding: 3rem 10rem;
+        grid-template-columns: max-content max-content; } }
+    @media only screen and (max-width: 37.5em) {
+      .dates__container {
+        padding: 0;
+        grid-column-gap: 0rem;
+        grid-template-rows: 9rem 1fr 9rem 1fr 9rem 1fr; } }
+    .dates__container__item-1, .dates__container__item-3, .dates__container__item-5 {
+      background-color: #eee;
+      padding: .4rem 2rem;
+      border-radius: .3rem;
+      transform: skewX(-10deg);
+      box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.4);
+      transition: all .3s; }
+      .dates__container__item-1:hover, .dates__container__item-3:hover, .dates__container__item-5:hover {
+        transform: translateY(-0.7rem) skewX(-10deg); }
+      @media only screen and (max-width: 37.5em) {
+        .dates__container__item-1, .dates__container__item-3, .dates__container__item-5 {
+          grid-column: 1 / -1; } }
+    .dates__container__item-2, .dates__container__item-4, .dates__container__item-6 {
+      display: flex; }
+
+.date,
+.month,
+.year {
+  cursor: pointer;
+  padding: 2rem 4.5rem;
+  text-align: center;
+  font-family: "Schoolbell", cursive;
+  font-size: 3rem;
+  color: #fff;
+  border-radius: .3rem;
+  background: #81c5cd;
+  background: linear-gradient(135deg, rgba(129, 197, 205, 0.8) 0%, rgba(170, 204, 159, 0.8) 50%, rgba(146, 203, 188, 0.8) 100%);
+  background-size: cover;
+  background-position: center;
+  transition: all .4s; }
+  @media only screen and (max-width: 56.25em) {
+    .date,
+    .month,
+    .year {
+      padding: 1.8rem 4rem; } }
+  .date:hover,
+  .month:hover,
+  .year:hover {
+    transform: translateY(-0.7rem); }
+
+.date {
+  margin-right: 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .date {
+      margin-right: 1rem; } }
+
+.month {
+  margin-right: 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .month {
+      margin-right: 1rem; } }
 
 .entry {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/bg-1-metro.jpg);

@@ -307,10 +307,10 @@ document.querySelector('.navigation__list__mobile__button').addEventListener('cl
 /*=======================PRE LOADER===========================*/
 /*============================================================*/
 
-$(window).on('load', function() {
-  if ($('#preloader').length) {
-    $('#preloader').delay(300).fadeOut('slow', function() {
-      $(this).remove();
-    });
-  }
-});
+// $(window).on('load', function() {
+//   if ($('#preloader').length) {
+//     $('#preloader').delay(300).fadeOut('slow', function() {
+//       $(this).remove();
+//     });
+//   }
+// });
