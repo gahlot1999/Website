@@ -12,6 +12,14 @@
 
     @include respond(phone) {
         padding: 3rem 0;
+        background: linear-gradient(120deg, rgba(255,255,255,1) 0%, 
+                                            rgba(255,255,255,1) 50%, 
+                                            rgba(155,214,139,.8) 50%,
+                                            rgba(114,196,175,.8) 100%), 
+                                              url(/img/dates-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     & > h2 {

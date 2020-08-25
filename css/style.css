@@ -458,7 +458,11 @@ canvas {
   background-position: center; }
   @media only screen and (max-width: 37.5em) {
     .dates {
-      padding: 3rem 0; } }
+      padding: 3rem 0;
+      background: linear-gradient(120deg, white 0%, white 50%, rgba(155, 214, 139, 0.8) 50%, rgba(114, 196, 175, 0.8) 100%), url(/img/dates-bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; } }
   .dates > h2 {
     margin-top: 3rem; }
     @media only screen and (max-width: 37.5em) {
