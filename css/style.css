@@ -137,8 +137,9 @@ body {
 #preloader:before {
   content: "";
   position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-bottom: 6px solid linear-gradient(180deg, #03045eff, #023e8aff, #0077b6ff, #0096c7ff, #00b4d8ff, #48cae4ff, #90e0efff, #ade8f4ff, #caf0f8ff);
   border-top: 6px solid #0096c7ff;
   border-radius: 50%;
