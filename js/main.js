@@ -314,3 +314,46 @@ document.querySelector('.navigation__list__mobile__button').addEventListener('cl
 //     });
 //   }
 // });
+
+/*============================================================*/
+/*====================IMP DATES ANIMATION=====================*/
+/*============================================================*/
+
+const kritika = document.querySelector('.dates__container__item-1');
+const kritikaBox = document.querySelector('.queenBox');
+
+const ashish = document.querySelector('.ashish');
+const ashishBox = document.querySelector('.ashishBox');
+
+const ak = document.querySelector('.ak');
+const akBox = document.querySelector('.akBox');
+
+kritika.addEventListener('click', function() {
+  if(akBox.classList.toggle("moving")) {
+    akBox.classList.toggle("moving")
+  }
+  if(ashishBox.classList.toggle("moving")) {
+    ashishBox.classList.toggle("moving");
+  }
+  kritikaBox.classList.toggle("moving");
+});
+
+ashish.addEventListener('click', function() {
+  if(kritikaBox.classList.toggle("moving")) {
+    kritikaBox.classList.toggle("moving");
+  }
+  if(akBox.classList.toggle("moving")) {
+    akBox.classList.toggle("moving")
+  }
+  ashishBox.classList.toggle("moving");
+});
+
+ak.addEventListener('click', function() {
+  if(kritikaBox.classList.toggle("moving")) {
+    kritikaBox.classList.toggle("moving");
+  }
+  if(ashishBox.classList.toggle("moving")) {
+    ashishBox.classList.toggle("moving");
+  }
+  akBox.classList.toggle("moving");
+});

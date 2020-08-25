@@ -121,14 +121,6 @@
     @include respond(tab-port) {
         margin-right: 1rem;
     }
-
-    &__name {
-        
-    }
-
-    &__value {
-        
-    }
 }
 
 .month {
@@ -136,22 +128,10 @@
     @include respond(tab-port) {
         margin-right: 1rem;
     }
-    &__name {
-        
-    }
-
-    &__value {
-        
-    }
 }
 
-.year {
-    &__name {
-        
-    }
-
-    &__value {
-        
-    }
+.moving {
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
-

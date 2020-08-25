@@ -67,3 +67,29 @@
 //         background-image: url('/img/entry-6.jpg');    
 //     }
 // }
+
+@keyframes moving {
+    0% {
+        transform: translateX(.3rem) translateY(.7rem);
+    }
+
+    20% {
+        transform: translateX(-.1rem) translateY(-.7rem);
+    }
+    
+    40% {
+        transform: translateX(.2rem) translateY(.25rem);
+    }
+    
+    60% {
+        transform: translateX(-.3rem) translateY(-.2rem);
+    }
+    
+    80% {
+        transform: translateX(0rem) translateY(.7rem);
+    }
+    
+    100% {
+        transform: translateX(.4rem) translateY(.06rem);
+    }
+}

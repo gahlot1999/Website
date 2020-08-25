@@ -1,0 +1,12 @@
+/*TOGGLE CLASSES*/
+.line1 {
+    transform: rotate(405deg) translate(-.5rem, 1.05rem) scale(.85);
+}
+
+.line2 {
+    display: none;
+}
+
+.line3 {
+    transform: rotate(-405deg) translate(-.5rem, -1.05rem) scale(.85);
+}

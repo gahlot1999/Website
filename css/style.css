@@ -43,6 +43,20 @@ ORDER: Base + typography > general layout + grid > page layout > components
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes moving {
+  0% {
+    transform: translateX(0.3rem) translateY(0.7rem); }
+  20% {
+    transform: translateX(-0.1rem) translateY(-0.7rem); }
+  40% {
+    transform: translateX(0.2rem) translateY(0.25rem); }
+  60% {
+    transform: translateX(-0.3rem) translateY(-0.2rem); }
+  80% {
+    transform: translateX(0rem) translateY(0.7rem); }
+  100% {
+    transform: translateX(0.4rem) translateY(0.06rem); } }
+
 *,
 *::after,
 *::before {
@@ -83,6 +97,16 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #0096c7ff; }
+
+/*TOGGLE CLASSES*/
+.line1 {
+  transform: rotate(405deg) translate(-0.5rem, 1.05rem) scale(0.85); }
+
+.line2 {
+  display: none; }
+
+.line3 {
+  transform: rotate(-405deg) translate(-0.5rem, -1.05rem) scale(0.85); }
 
 body {
   font-family: "Lato", sans-serif;
@@ -282,15 +306,6 @@ canvas {
 
 .display {
   display: block; }
-
-.line1 {
-  transform: rotate(405deg) translate(-0.5rem, 1.05rem) scale(0.85); }
-
-.line2 {
-  display: none; }
-
-.line3 {
-  transform: rotate(-405deg) translate(-0.5rem, -1.05rem) scale(0.85); }
 
 .about {
   grid-column: 1 / -1;
@@ -532,6 +547,11 @@ canvas {
   @media only screen and (max-width: 56.25em) {
     .month {
       margin-right: 1rem; } }
+
+.moving {
+  animation-name: moving;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
 
 .entry {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/img/bg-1-metro.jpg);
