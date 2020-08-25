@@ -139,8 +139,7 @@ body {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #f2f2f2;
-  border-top: 6px solid #ff6345;
+  border-top: 6px solid #0096c7ff;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -308,7 +307,7 @@ canvas {
   background-position: center; }
   @media only screen and (max-width: 37.5em) {
     .about {
-      padding: 2rem 3rem; } }
+      padding: 5rem 3rem; } }
   .about__heading-primary {
     color: #000;
     text-transform: uppercase;
@@ -390,7 +389,7 @@ canvas {
   @media only screen and (max-width: 37.5em) {
     .birthTimer__title {
       grid-column: full-start / full-end;
-      padding: 1rem 0; } }
+      padding: 3rem 0; } }
   .birthTimer__title__phone {
     display: none;
     line-height: 1;
@@ -423,7 +422,7 @@ canvas {
   @media only screen and (max-width: 37.5em) {
     .birthTimer__time {
       grid-column: full-start / full-end;
-      padding: 1rem 0; } }
+      padding: 2rem 0 3rem 0; } }
   .birthTimer__time__timer {
     height: 100%;
     display: flex;
