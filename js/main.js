@@ -229,9 +229,9 @@ function birthTimer() {
   var seconds = Math.floor(finalTime / 1000);
   var minutes = Math.floor(seconds / 60);
   var hours = Math.floor(minutes / 60);
-  var days = Math.floor(hours / 24);
+  var days = Math.floor((hours / 24 )-6);
   var years = Math.floor(days / 365);
-
+  
   seconds %= 60;
 
   if(seconds<10) {
@@ -265,7 +265,7 @@ AOS.init();
 /*============================================================*/
 
 var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 2000
+  speed: 1000
 });
 
 /*============================================================*/
@@ -359,18 +359,80 @@ ak.addEventListener('click', function() {
 });
 
 /*============================================================*/
-/*========================WAYPOINTS===========================*/
+/*=======================COUNTER UP===========================*/
 /*============================================================*/
 
 $(".num").counterUp({delay:10,time:1000});
 
 /*============================================================*/
-/*=======================COUNTER UP===========================*/
+/*========================TOGETHER============================*/
 /*============================================================*/
 
+function change1() {
+  const random = Math.floor(Math.random() * 80) + 1;
+  document.querySelector('.togetherContainer__item-1').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
+  setTimeout(change1, 25000);
+}
 
+function change2() {
+  const random = Math.floor(Math.random() * 80) + 1;
+  document.querySelector('.togetherContainer__item-2').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
+  setTimeout(change2, 20000);
+}
 
+function change3() {
+  const random = Math.floor(Math.random() * 80) + 1;
+  document.querySelector('.togetherContainer__item-3').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
+  setTimeout(change3, 15000);
+}
 
-      
+function change4() {
+  const random = Math.floor(Math.random() * 80) + 1;
+  document.querySelector('.togetherContainer__item-4').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
+  setTimeout(change4, 10000);
+}
 
+function change5() {
+  const random = Math.floor(Math.random() * 80) + 1;
+  document.querySelector('.togetherContainer__item-5').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
+  setTimeout(change5, 1000);
+}
 
+change1();
+change2();
+change3();
+change4();
+change5();
+
+function relationTimer() {
+  var now = new Date();
+  var relationDate = new Date(2016, 9, 22);
+  
+  var currentTime = now.getTime();
+  var relationTime = relationDate.getTime();
+  
+  var finalTime = currentTime - relationTime;
+  
+  var seconds = Math.floor(finalTime / 1000);
+  var minutes = Math.floor(seconds / 60);
+  var hours = Math.floor(minutes / 60);
+  var days = Math.floor(hours / 24);
+  var years = Math.floor(days / 365);
+
+  seconds %= 60;
+
+  if(seconds<10) {
+    seconds = "0"+seconds;
+  }
+  
+  
+  document.getElementById("rel_years").textContent = years;
+  document.getElementById("rel_days").textContent = days;
+  document.getElementById("rel_hours").textContent = hours;
+  document.getElementById("rel_minutes").textContent = minutes;
+  document.getElementById("rel_seconds").textContent = seconds;
+
+  setTimeout(relationTimer, 1000); 
+}
+
+relationTimer();

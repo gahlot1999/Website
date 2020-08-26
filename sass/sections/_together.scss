@@ -1,0 +1,109 @@
+.together {
+    grid-column: 1 / -1;
+    position: relative;
+    padding: 12rem 5rem;
+    height: max-content;
+
+    @include respond(phone) {
+        padding: 4rem 3rem;
+    }
+    
+    background: linear-gradient(45deg, rgba(255,255,255,1) 0%, 
+                                        rgba(255,255,255,1) 50%, 
+                                        rgba(155,214,139,.8) 50%,
+                                        rgba(114,196,175,.8) 100%), 
+                                          url(/img/bg-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include respond(phone) {
+        padding: 3rem 0;
+        background: linear-gradient(58deg, rgba(255,255,255,1) 0%, 
+                                            rgba(255,255,255,1) 50%, 
+                                            rgba(155,214,139,.8) 50%,
+                                            rgba(114,196,175,.8) 100%), 
+                                              url(/img/bg-2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__heading {
+        font-family: $font-family-2;
+        text-align: center;
+        font-size: 5rem;
+        color: #000;
+
+        &__heart {
+            color: rgba(red, .8);
+        }
+    }
+
+    &Container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+    
+        &__item {
+            cursor: pointer;
+            text-align: center;
+            height: 20rem;
+            width: 20rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: $font-family-3;
+            font-size: 4.5rem;
+            color: $color-white;
+            border-radius: .3rem;
+
+            &-1 {
+                // background: linear-gradient(rgba(#fff, .5), rgba(#fff, .7)), url(/img/1.jpg);
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 2rem;
+            }
+
+            &-2 {
+                background: linear-gradient(rgba(#fff, .5), rgba(#fff, .7)), url(/img/2.jpg);
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 2rem;
+            }
+
+            &-3 {
+                background: linear-gradient(rgba(#fff, .5), rgba(#fff, .7)), url(/img/3.jpg);
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 2rem;
+            }
+
+            &-4 {
+                background: linear-gradient(rgba(#fff, .5), rgba(#fff, .7)), url(/img/4.jpg);
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 2rem;
+            }
+
+            &-5 {
+                background: linear-gradient(rgba(#fff, .5), rgba(#fff, .7)), url(/img/5.jpg);
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 2rem;
+            }
+            
+        }
+    
+        &__item:not(:last-child) {
+            margin-right: 2rem;
+
+            @include respond(phone) {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
