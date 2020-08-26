@@ -22,5 +22,6 @@
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1"
-  }
+  },
+  "dependencies": {}
 }

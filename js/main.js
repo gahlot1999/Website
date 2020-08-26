@@ -265,7 +265,7 @@ AOS.init();
 /*============================================================*/
 
 var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000
+  speed: 2000
 });
 
 /*============================================================*/
@@ -357,3 +357,74 @@ ak.addEventListener('click', function() {
   }
   akBox.classList.toggle("moving");
 });
+
+/*============================================================*/
+/*========================WAYPOINTS===========================*/
+/*============================================================*/
+
+var waypoint = new Waypoint({
+  element: document.getElementById('dates'),
+  handler: function() {
+    const counters_year = document.querySelectorAll('.counter_year');
+
+    counters_year.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+    
+        const inc = 1;
+    
+        if(count < target) {
+          counter.innerText = count + inc;
+          setTimeout(updateCount, 1);
+        } else {
+          count.innerText = target;
+        }
+      }
+      updateCount();
+    });
+    
+    const counters_month = document.querySelectorAll('.counter_month');
+    
+    counters_month.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+    
+        const inc = 1;
+    
+        if(count < target) {
+          counter.innerText = count + inc;
+          setTimeout(updateCount, 1500);
+        } else {
+          count.innerText = target;
+        }
+      }
+      updateCount();
+    });
+    
+    const counters_day = document.querySelectorAll('.counter_day');
+    
+    counters_day.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+    
+        const inc = 1;
+    
+        if(count < target) {
+          counter.innerText = count + inc;
+          setTimeout(updateCount, 1000);
+        } else {
+          count.innerText = target;
+        }
+      }
+      updateCount();
+    });
+  }
+});
+
+/*============================================================*/
+/*=======================COUNTER UP===========================*/
+/*============================================================*/
+

@@ -541,7 +541,8 @@ canvas {
     transform: translateY(-0.7rem); }
 
 .date {
-  margin-right: 4rem; }
+  margin-right: 4rem;
+  width: 100%; }
   @media only screen and (max-width: 56.25em) {
     .date {
       margin-right: 1rem; } }

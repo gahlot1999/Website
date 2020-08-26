@@ -126,6 +126,8 @@
 
 .date {
     margin-right: 4rem;
+    width: 100%;
+
     @include respond(tab-port) {
         margin-right: 1rem;
     }
