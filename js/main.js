@@ -362,70 +362,17 @@ ak.addEventListener('click', function() {
 /*========================WAYPOINTS===========================*/
 /*============================================================*/
 
-var waypoint = new Waypoint({
-  element: document.getElementById('dates'),
-  handler: function() {
-    const counters_year = document.querySelectorAll('.counter_year');
-
-    counters_year.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-    
-        const inc = 1;
-    
-        if(count < target) {
-          counter.innerText = count + inc;
-          setTimeout(updateCount, 1);
-        } else {
-          count.innerText = target;
-        }
-      }
-      updateCount();
-    });
-    
-    const counters_month = document.querySelectorAll('.counter_month');
-    
-    counters_month.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-    
-        const inc = 1;
-    
-        if(count < target) {
-          counter.innerText = count + inc;
-          setTimeout(updateCount, 1500);
-        } else {
-          count.innerText = target;
-        }
-      }
-      updateCount();
-    });
-    
-    const counters_day = document.querySelectorAll('.counter_day');
-    
-    counters_day.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-    
-        const inc = 1;
-    
-        if(count < target) {
-          counter.innerText = count + inc;
-          setTimeout(updateCount, 1000);
-        } else {
-          count.innerText = target;
-        }
-      }
-      updateCount();
-    });
-  },
-  offset: '30%'
-});
+$(".num_1").counterUp({delay:10,time:1000});
+$(".num_2").counterUp({delay:10,time:1000});
+$(".num_3").counterUp({delay:10,time:1000});
 
 /*============================================================*/
 /*=======================COUNTER UP===========================*/
 /*============================================================*/
+
+
+
+
+      
+
 
