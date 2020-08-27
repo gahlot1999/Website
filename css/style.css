@@ -686,6 +686,7 @@ canvas {
   grid-column: 1 / -1;
   position: relative;
   padding: 12rem 5rem;
+  padding-top: 8rem;
   height: max-content;
   background: linear-gradient(45deg, white 0%, white 50%, rgba(155, 214, 139, 0.8) 50%, rgba(114, 196, 175, 0.8) 100%), url(/img/bg-2.jpg);
   background-size: cover;
@@ -693,10 +694,8 @@ canvas {
   background-position: center; }
   @media only screen and (max-width: 37.5em) {
     .together {
-      padding: 4rem 3rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .together {
-      padding: 3rem 0;
+      padding: 3rem 1rem;
+      padding-bottom: 5rem;
       background: linear-gradient(58deg, white 0%, white 50%, rgba(155, 214, 139, 0.8) 50%, rgba(114, 196, 175, 0.8) 100%), url(/img/bg-2.jpg);
       background-size: cover;
       background-repeat: no-repeat;
@@ -750,7 +749,16 @@ canvas {
         background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)), url(/img/5.jpg);
         background-position: center;
         background-size: cover;
-        margin-bottom: 2rem; }
+        margin-bottom: 2rem;
+        position: relative; }
+        .togetherContainer__item-5::after {
+          content: 'still counting...';
+          white-space: nowrap;
+          position: absolute;
+          bottom: -6rem;
+          right: -1rem;
+          font-size: 3.5rem;
+          color: #000; }
     .togetherContainer__item:not(:last-child) {
       margin-right: 2rem; }
       @media only screen and (max-width: 37.5em) {

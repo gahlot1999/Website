@@ -2,11 +2,8 @@
     grid-column: 1 / -1;
     position: relative;
     padding: 12rem 5rem;
+    padding-top: 8rem;
     height: max-content;
-
-    @include respond(phone) {
-        padding: 4rem 3rem;
-    }
     
     background: linear-gradient(45deg, rgba(255,255,255,1) 0%, 
                                         rgba(255,255,255,1) 50%, 
@@ -18,7 +15,8 @@
     background-position: center;
 
     @include respond(phone) {
-        padding: 3rem 0;
+        padding: 3rem 1rem;
+        padding-bottom: 5rem;
         background: linear-gradient(58deg, rgba(255,255,255,1) 0%, 
                                             rgba(255,255,255,1) 50%, 
                                             rgba(155,214,139,.8) 50%,
@@ -94,6 +92,17 @@
                 background-position: center;
                 background-size: cover;
                 margin-bottom: 2rem;
+                position: relative;
+
+                &::after {
+                    content: 'still counting...';
+                    white-space: nowrap;
+                    position: absolute;
+                    bottom: -6rem;
+                    right: -1rem;
+                    font-size: 3.5rem;
+                    color: $color-black;
+                }
             }
             
         }
@@ -106,4 +115,11 @@
             }
         }
     }
+
+    // &Footer {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: flex-end;
+    //     padding: 0 2rem;
+    // }
 }
