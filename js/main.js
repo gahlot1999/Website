@@ -371,31 +371,31 @@ $(".num").counterUp({delay:10,time:1000});
 function change1() {
   const random = Math.floor(Math.random() * 80) + 1;
   document.querySelector('.togetherContainer__item-1').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
-  setTimeout(change1, 25000);
+  setTimeout(change1, 120000);
 }
 
 function change2() {
   const random = Math.floor(Math.random() * 80) + 1;
   document.querySelector('.togetherContainer__item-2').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
-  setTimeout(change2, 20000);
+  setTimeout(change2, 100000);
 }
 
 function change3() {
   const random = Math.floor(Math.random() * 80) + 1;
   document.querySelector('.togetherContainer__item-3').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
-  setTimeout(change3, 15000);
+  setTimeout(change3, 50000);
 }
 
 function change4() {
   const random = Math.floor(Math.random() * 80) + 1;
   document.querySelector('.togetherContainer__item-4').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
-  setTimeout(change4, 10000);
+  setTimeout(change4, 30000);
 }
 
 function change5() {
   const random = Math.floor(Math.random() * 80) + 1;
   document.querySelector('.togetherContainer__item-5').style.backgroundImage = `linear-gradient(125deg, rgba(129,197,205,.7) 0%, rgba(170,204,159,.7) 50%, rgba(146,203,188,.7) 100%), url(/img/${random}.jpg)`;
-  setTimeout(change5, 1000);
+  setTimeout(change5, 10000);
 }
 
 change1();
@@ -436,3 +436,12 @@ function relationTimer() {
 }
 
 relationTimer();
+
+/*============================================================*/
+/*====================MODAL OPEN CLOSE========================*/
+/*============================================================*/
+
+// document.querySelector('.modal1__clsbtn').addEventListener('click', function() {
+//   document.getElementById('modal1-open').checked = false;
+//   document.getElementById('modal1-close').checked = true;
+// })

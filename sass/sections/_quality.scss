@@ -1,0 +1,187 @@
+.quality {
+    grid-column: 1 / -1;
+    padding: 6rem 3rem;
+
+    &__content {
+        padding: 0 5rem;
+        font-size: 1.8rem;
+        color: $color-grey-dark-3;
+        text-align: center;
+        margin-top: 1.8rem;
+        margin-bottom: 4rem;
+    }
+
+    &Container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 26rem);
+        grid-gap: 4rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0rem;
+
+        &__item {
+            cursor: pointer;
+            height: 35rem;
+            border-radius: .5rem;
+            box-shadow: 0 0.2rem .4rem .3rem #eee;
+
+            &-1 {
+                background: url(/img/confident.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                &-cont {
+                    text-align: center;
+                    height: 100%;
+                    padding: 0 1.6rem;
+                    backdrop-filter: blur(1rem);
+                    border-radius: .5rem;
+                    transform: scale(0);
+                    transition: all .3s ease-in-out;
+
+                    & svg {
+                        margin-top: 3rem;
+                        height: 7rem;
+                        width: 7rem;
+                        fill: rgba($color-white, .7);
+                        fill-rule: evenodd;
+                    }
+
+                    & h2 {
+                        font-size: 3.5rem;
+                        color: $color-grey-dark-3;
+                    }
+
+                    & p {
+                        font-size: 1.5rem;
+                        color: $color-black;
+                    }
+                }
+
+                &:hover > &-cont {
+                    transform: scale(1);
+                }
+            }
+
+            &-2 {
+                background: url(/img/82.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                &-cont {
+                    text-align: center;
+                    height: 100%;
+                    padding: 0 1.6rem;
+                    backdrop-filter: blur(1rem);
+                    border-radius: .5rem;
+                    transform: scale(0);
+                    transition: all .3s ease-in-out;
+
+                    & svg {
+                        margin-top: 3rem;
+                        height: 7rem;
+                        width: 7rem;
+                        // fill: rgba($color-white, .7);
+                        fill: #f44;
+                        fill-rule: evenodd;
+                    }
+
+                    & h2 {
+                        font-size: 3.5rem;
+                        color: $color-grey-dark-3;
+                    }
+
+                    & p {
+                        font-size: 1.5rem;
+                        color: $color-black;
+                    }
+                }
+
+                &:hover > &-cont {
+                    transform: scale(1);
+                }
+            }
+
+            &-3 {
+                background: url(/img/77.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                &-cont {
+                    text-align: center;
+                    height: 100%;
+                    padding: 0 1.6rem;
+                    backdrop-filter: blur(1rem);
+                    border-radius: .5rem;
+                    transform: scale(0);
+                    transition: all .3s ease-in-out;
+
+                    & svg {
+                        margin-top: 3rem;
+                        height: 7rem;
+                        width: 7rem;
+                        // fill: rgba($color-white, .7);
+                        fill: #6f6;
+                        fill-rule: evenodd;
+                    }
+
+                    & h2 {
+                        font-size: 3.5rem;
+                        color: #eee;
+                    }
+
+                    & p {
+                        font-size: 1.5rem;
+                        color: #ddd;
+                    }
+                }
+
+                &:hover > &-cont {
+                    transform: scale(1);
+                }
+            }
+
+            &-4 {
+                background: url(/img/81.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                &-cont {
+                    text-align: center;
+                    height: 100%;
+                    padding: 0 1.6rem;
+                    backdrop-filter: blur(1rem);
+                    border-radius: .5rem;
+                    transform: scale(0);
+                    transition: all .3s ease-in-out;
+
+                    & svg {
+                        margin-top: 3rem;
+                        height: 7rem;
+                        width: 7rem;
+                        fill: rgba($color-white, .7);
+                        fill-rule: evenodd;
+                    }
+
+                    & h2 {
+                        font-size: 3.5rem;
+                        color: $color-grey-dark-3;
+                    }
+
+                    & p {
+                        font-size: 1.5rem;
+                        color: $color-black;
+                    }
+                }
+
+                &:hover > &-cont {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}

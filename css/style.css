@@ -449,6 +449,116 @@ canvas {
       .birthTimer__time__timer__content__box:last-child {
         color: #fff; }
 
+.contact {
+  grid-column: 1 / span 9;
+  background-color: #0096c7ff;
+  height: 100vh;
+  background: url(/img/bg-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .contact {
+      height: 50vh;
+      grid-column: 1 / -1; } }
+  .contact__msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    text-align: center;
+    height: 31rem;
+    width: 60rem;
+    backdrop-filter: blur(1rem); }
+    @media only screen and (max-width: 37.5em) {
+      .contact__msg {
+        width: 90%;
+        height: 25rem; } }
+    .contact__msg__content {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 8rem; }
+      @media only screen and (max-width: 37.5em) {
+        .contact__msg__content {
+          font-size: 6rem; } }
+
+.l-contactForm {
+  background-color: #fff;
+  width: 80%;
+  padding: 2.5rem 5rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.contactForm {
+  grid-column: 10 / -1;
+  height: 100vh;
+  background-color: #eee;
+  position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .contactForm {
+      grid-column: 1 / -1;
+      height: 65vh; } }
+  .contactForm__heading {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    word-spacing: .2rem;
+    margin-bottom: 1rem; }
+  .contactForm__subheading {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 .5rem; }
+  .contactForm__value {
+    width: 100%;
+    padding: 1rem .5rem;
+    font-family: "Lato", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid #999;
+    margin-bottom: .8rem; }
+    .contactForm__value option {
+      font-family: "Lato", sans-serif;
+      padding: 1rem 1.5rem; }
+  .contactForm__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .7rem; }
+    .contactForm__button__submit, .contactForm__button__reset {
+      cursor: pointer;
+      color: white;
+      padding: .6rem 2rem;
+      outline: none;
+      border: none;
+      border-radius: .3rem; }
+    .contactForm__button__submit {
+      margin-right: 1rem;
+      background-color: #08f26e;
+      transition: all .2s; }
+      .contactForm__button__submit:hover {
+        background-color: #07d15f; }
+    .contactForm__button__reset {
+      background-color: #ff2626;
+      transition: all .2s; }
+      .contactForm__button__reset:hover {
+        background-color: #f20000; }
+
 .dates {
   grid-column: 1 / -1;
   position: relative;
@@ -688,7 +798,7 @@ canvas {
   padding: 12rem 5rem;
   padding-top: 8rem;
   height: max-content;
-  background: linear-gradient(45deg, white 0%, white 50%, rgba(155, 214, 139, 0.8) 50%, rgba(114, 196, 175, 0.8) 100%), url(/img/bg-2.jpg);
+  background: linear-gradient(135deg, rgba(155, 214, 139, 0.8) 0%, rgba(114, 196, 175, 0.8) 50%, white 50%, white 100%), url(/img/bg-2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -696,7 +806,7 @@ canvas {
     .together {
       padding: 3rem 1rem;
       padding-bottom: 5rem;
-      background: linear-gradient(58deg, white 0%, white 50%, rgba(155, 214, 139, 0.8) 50%, rgba(114, 196, 175, 0.8) 100%), url(/img/bg-2.jpg);
+      background: linear-gradient(120deg, rgba(155, 214, 139, 0.8) 0%, rgba(114, 196, 175, 0.8) 50%, white 50%, white 100%), url(/img/bg-2.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center; } }
@@ -764,3 +874,134 @@ canvas {
       @media only screen and (max-width: 37.5em) {
         .togetherContainer__item:not(:last-child) {
           margin-right: 1rem; } }
+
+.quality {
+  grid-column: 1 / -1;
+  padding: 6rem 3rem; }
+  .quality__content {
+    padding: 0 5rem;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-top: 1.8rem;
+    margin-bottom: 4rem; }
+  .qualityContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 26rem);
+    grid-gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0rem; }
+    .qualityContainer__item {
+      cursor: pointer;
+      height: 35rem;
+      border-radius: .5rem;
+      box-shadow: 0 0.2rem .4rem .3rem #eee; }
+      .qualityContainer__item-1 {
+        background: url(/img/confident.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+        .qualityContainer__item-1-cont {
+          text-align: center;
+          height: 100%;
+          padding: 0 1.6rem;
+          backdrop-filter: blur(1rem);
+          border-radius: .5rem;
+          transform: scale(0);
+          transition: all .3s ease-in-out; }
+          .qualityContainer__item-1-cont svg {
+            margin-top: 3rem;
+            height: 7rem;
+            width: 7rem;
+            fill: rgba(255, 255, 255, 0.7);
+            fill-rule: evenodd; }
+          .qualityContainer__item-1-cont h2 {
+            font-size: 3.5rem;
+            color: #333; }
+          .qualityContainer__item-1-cont p {
+            font-size: 1.5rem;
+            color: #000; }
+        .qualityContainer__item-1:hover > .qualityContainer__item-1-cont {
+          transform: scale(1); }
+      .qualityContainer__item-2 {
+        background: url(/img/82.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+        .qualityContainer__item-2-cont {
+          text-align: center;
+          height: 100%;
+          padding: 0 1.6rem;
+          backdrop-filter: blur(1rem);
+          border-radius: .5rem;
+          transform: scale(0);
+          transition: all .3s ease-in-out; }
+          .qualityContainer__item-2-cont svg {
+            margin-top: 3rem;
+            height: 7rem;
+            width: 7rem;
+            fill: #f44;
+            fill-rule: evenodd; }
+          .qualityContainer__item-2-cont h2 {
+            font-size: 3.5rem;
+            color: #333; }
+          .qualityContainer__item-2-cont p {
+            font-size: 1.5rem;
+            color: #000; }
+        .qualityContainer__item-2:hover > .qualityContainer__item-2-cont {
+          transform: scale(1); }
+      .qualityContainer__item-3 {
+        background: url(/img/77.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+        .qualityContainer__item-3-cont {
+          text-align: center;
+          height: 100%;
+          padding: 0 1.6rem;
+          backdrop-filter: blur(1rem);
+          border-radius: .5rem;
+          transform: scale(0);
+          transition: all .3s ease-in-out; }
+          .qualityContainer__item-3-cont svg {
+            margin-top: 3rem;
+            height: 7rem;
+            width: 7rem;
+            fill: #6f6;
+            fill-rule: evenodd; }
+          .qualityContainer__item-3-cont h2 {
+            font-size: 3.5rem;
+            color: #eee; }
+          .qualityContainer__item-3-cont p {
+            font-size: 1.5rem;
+            color: #ddd; }
+        .qualityContainer__item-3:hover > .qualityContainer__item-3-cont {
+          transform: scale(1); }
+      .qualityContainer__item-4 {
+        background: url(/img/81.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+        .qualityContainer__item-4-cont {
+          text-align: center;
+          height: 100%;
+          padding: 0 1.6rem;
+          backdrop-filter: blur(1rem);
+          border-radius: .5rem;
+          transform: scale(0);
+          transition: all .3s ease-in-out; }
+          .qualityContainer__item-4-cont svg {
+            margin-top: 3rem;
+            height: 7rem;
+            width: 7rem;
+            fill: rgba(255, 255, 255, 0.7);
+            fill-rule: evenodd; }
+          .qualityContainer__item-4-cont h2 {
+            font-size: 3.5rem;
+            color: #333; }
+          .qualityContainer__item-4-cont p {
+            font-size: 1.5rem;
+            color: #000; }
+        .qualityContainer__item-4:hover > .qualityContainer__item-4-cont {
+          transform: scale(1); }

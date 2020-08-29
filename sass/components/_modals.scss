@@ -1,6 +1,71 @@
-// .modal {
-//     position: fixed;
-//     height: 100vh;
-//     width: 100%;
-//     background-color: red;
+// .close__btn {
+//     cursor: pointer;
+//     height: 3rem;
+//     width: 3rem;
+//     fill: rgba(#fff, 1);
+//     transition: all .3s;
+
+//     &:hover {
+//         fill: $color-primary;
+//     }
+// }
+
+// .modal1 {
+//     position: relative;
+
+//     &__open,
+//     &__close {
+//         display: none;
+//     }
+
+//     &__open:checked ~ &__background, 
+//     &__open:checked ~ &__clsbtn {
+//         display: block;   
+//     }
+
+//     &__open:checked ~ &__content {
+//         transform: translate(-50%, -50%) scale(1);
+//     }
+
+//     &__close:checked ~ &__background,
+//     &__close:checked ~ &__clsbtn {
+//         display: none;
+//     }
+
+//     &__close:checked ~ &__content {
+//         transform: translate(-50%, 200%);
+//         opacity: 0;
+//     }
+
+//     &__clsbtn {
+//         display: none;
+//         position: fixed;
+//         top: 10%;
+//         right: 7%;
+//         z-index: 1;
+//     }  
+
+//     &__background {
+//         display: none;
+//         position: fixed;
+//         top: 0;
+//         height: 100vh;
+//         width: 100%;
+//         background: linear-gradient(rgba(#000, .7), rgba(#000, .7));
+//         backdrop-filter: blur(2px);
+//     }
+
+//     &__content {
+//         position: fixed;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%) scale(0);
+//         background: url(/img/7.jpg);
+//         background-position: center;
+//         background-size: cover;
+//         width: 50%;
+//         height: 50vh;
+//         background-color: white;
+//         transition: all .4s ease-in-out;
+//     }
 // }

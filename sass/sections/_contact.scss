@@ -1,0 +1,134 @@
+.contact {
+    grid-column: 1 / span 9;
+    background-color: $blue-green;
+    height: 100vh;
+    background: url(/img/bg-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    @include respond(phone) {
+        height: 50vh;
+        grid-column: 1 / -1;
+    }
+    
+    &__msg {
+        @include absCenter;
+        display: inline-block;
+        text-align: center;
+        height: 31rem;
+        width: 60rem;
+        backdrop-filter: blur(1rem);
+
+        @include respond(phone) {
+            width: 90%;
+            height: 25rem;
+        }
+
+        &__content {
+            width: 100%;
+            @include absCenter;
+            color: $color-white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 8rem;
+
+            @include respond(phone) {
+                font-size: 6rem;
+            }
+        }
+    }
+}
+
+.l-contactForm {
+    background-color: $color-white;
+    width: 80%;      
+    padding: 2.5rem 5rem;
+    border-radius: 1rem;
+    @include absCenter;
+}
+
+.contactForm {
+    grid-column: 10 / -1;
+    height: 100vh;
+    background-color: #eee;
+    position: relative;
+
+    @include respond(phone) {
+        grid-column: 1 / -1;
+        height: 65vh;
+    }
+
+
+    &__heading {
+        text-align: center;
+        color: $color-grey-dark-3;
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        word-spacing: .2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__subheading {
+        color: $color-black;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 0 .5rem;
+    }
+
+    &__value {
+        width: 100%;
+        padding: 1rem .5rem;
+        font-family: $font-family;
+        font-size: 1.4rem;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        border-bottom: .1rem solid $color-grey-dark-2;
+        margin-bottom: .8rem;
+
+        & option {
+            font-family: $font-family;
+            padding: 1rem 1.5rem;
+        }        
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: .7rem;
+        &__submit,
+        &__reset {
+            cursor: pointer;
+            color: white;
+            padding: .6rem 2rem;
+            outline: none;
+            border: none;
+            border-radius: .3rem;
+        }
+
+        &__submit {
+            margin-right: 1rem;
+            background-color: #08f26e;
+            transition: all .2s;
+
+            &:hover {
+                background-color: #07d15f;
+            }
+        }
+
+        &__reset {
+            background-color: #ff2626;
+            transition: all .2s;
+
+            &:hover {
+                background-color: #f20000;
+            }
+        }
+    }
+    
+}
+

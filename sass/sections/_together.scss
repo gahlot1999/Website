@@ -5,11 +5,11 @@
     padding-top: 8rem;
     height: max-content;
     
-    background: linear-gradient(45deg, rgba(255,255,255,1) 0%, 
+    background: linear-gradient(135deg, rgba(155,214,139,.8) 0%,
+                                        rgba(114,196,175,.8) 50%,
                                         rgba(255,255,255,1) 50%, 
-                                        rgba(155,214,139,.8) 50%,
-                                        rgba(114,196,175,.8) 100%), 
-                                          url(/img/bg-2.jpg);
+                                        rgba(255,255,255,1) 100%), 
+                                        url(/img/bg-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -17,10 +17,10 @@
     @include respond(phone) {
         padding: 3rem 1rem;
         padding-bottom: 5rem;
-        background: linear-gradient(58deg, rgba(255,255,255,1) 0%, 
+        background: linear-gradient(120deg, rgba(155,214,139,.8) 0%,
+                                            rgba(114,196,175,.8) 50%,
                                             rgba(255,255,255,1) 50%, 
-                                            rgba(155,214,139,.8) 50%,
-                                            rgba(114,196,175,.8) 100%), 
+                                            rgba(255,255,255,1) 100%), 
                                               url(/img/bg-2.jpg);
         background-size: cover;
         background-repeat: no-repeat;
@@ -115,11 +115,4 @@
             }
         }
     }
-
-    // &Footer {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: flex-end;
-    //     padding: 0 2rem;
-    // }
 }
