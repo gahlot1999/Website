@@ -460,7 +460,7 @@ canvas {
   position: relative; }
   @media only screen and (max-width: 37.5em) {
     .contact {
-      height: 50vh;
+      height: 40vh;
       grid-column: 1 / -1; } }
   .contact__msg {
     position: absolute;
@@ -474,8 +474,8 @@ canvas {
     backdrop-filter: blur(1rem); }
     @media only screen and (max-width: 37.5em) {
       .contact__msg {
-        width: 90%;
-        height: 25rem; } }
+        width: 80%;
+        height: 21rem; } }
     .contact__msg__content {
       width: 100%;
       position: absolute;
@@ -507,7 +507,7 @@ canvas {
   @media only screen and (max-width: 37.5em) {
     .contactForm {
       grid-column: 1 / -1;
-      height: 65vh; } }
+      height: 70vh; } }
   .contactForm__heading {
     text-align: center;
     color: #333;
@@ -522,6 +522,9 @@ canvas {
     font-size: 1.5rem;
     font-weight: 500;
     padding: 0 .5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contactForm__subheading {
+        font-size: 1.8rem; } }
   .contactForm__value {
     width: 100%;
     padding: 1rem .5rem;
@@ -532,6 +535,9 @@ canvas {
     border: none;
     border-bottom: 0.1rem solid #999;
     margin-bottom: .8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contactForm__value {
+        font-size: 1.6rem; } }
     .contactForm__value option {
       font-family: "Lato", sans-serif;
       padding: 1rem 1.5rem; }
