@@ -63,7 +63,7 @@
 
         &__link {
             text-decoration: none;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             letter-spacing: 1px;
             color: white;
             font-weight: 700;
@@ -80,6 +80,7 @@
             transition: all .5s;
             background-image: linear-gradient(120deg, $blue-green 0%, $blue-green 50%, $color-white 50%);
             background-size: 220%;
+            border-radius: .5rem;
 
             @include respond(tab-port) {
                 display: none;

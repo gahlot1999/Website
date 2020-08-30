@@ -8,19 +8,10 @@
 @import "base/typography";
 @import "base/utilities";
 
-
-@import "components/preloader";
-
-@import "components/bg-video";
 @import "components/button";
-@import "components/card";
-@import "components/composition";
-@import "components/feature-box";
 @import "components/firework";
-@import "components/form";
-@import "components/popup";
-@import "components/story";
 @import "components/modals";
+@import "components/preloader";
 
 @import "layout/footer";
 @import "layout/grid";
@@ -31,6 +22,7 @@
 @import "sections/contact";
 @import "sections/dates";
 @import "sections/entry";
+@import "sections/gallery";
 @import "sections/header";
 @import "sections/together";
 @import "sections/quality";
