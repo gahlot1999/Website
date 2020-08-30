@@ -50,7 +50,7 @@
         z-index: 1;
 
         &__mobile {
-            width: 50%;
+            width: 80%;
             position: absolute;
             top: 45%;
             left: 50%;
@@ -61,7 +61,7 @@
                 list-style: none;
                 margin-bottom: 1rem;
                 text-align: center;
-                box-shadow: 0 .3rem .5rem $color-grey-dark-2;
+                // box-shadow: 0 .3rem .5rem $color-grey-dark-2;
                 transition: all .3s;
 
                 &:hover {
@@ -71,18 +71,17 @@
             }
 
             &__link {
-                width: 100%;
                 font-family: $font-family;
                 color: $color-white;
                 text-decoration: none;
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             &__button {
                 cursor: pointer;
                 white-space: nowrap;
                 text-align: center;
-                font-size: 1.8rem;
+                font-size: 2rem;
                 padding: .4rem 6rem;
                 border-radius: 10rem;
                 border: none;

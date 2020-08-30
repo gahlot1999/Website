@@ -259,7 +259,7 @@ canvas {
   transition: all .4s;
   z-index: 1; }
   .navigation__list__mobile {
-    width: 50%;
+    width: 80%;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -269,22 +269,20 @@ canvas {
       list-style: none;
       margin-bottom: 1rem;
       text-align: center;
-      box-shadow: 0 0.3rem 0.5rem #999;
       transition: all .3s; }
       .navigation__list__mobile__item:hover {
         background-color: #999;
         transform: translateY(-0.5rem); }
     .navigation__list__mobile__link {
-      width: 100%;
       font-family: "Lato", sans-serif;
       color: #fff;
       text-decoration: none;
-      font-size: 2rem; }
+      font-size: 2.5rem; }
     .navigation__list__mobile__button {
       cursor: pointer;
       white-space: nowrap;
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 2rem;
       padding: .4rem 6rem;
       border-radius: 10rem;
       border: none;
@@ -736,6 +734,11 @@ canvas {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(128, 5vw);
   grid-gap: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .gallery {
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(128, 8vw);
+      grid-gap: .4rem; } }
   .gallery__item--1 {
     grid-row: 1 / span 3;
     grid-column: 1 / span 2; }
