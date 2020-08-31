@@ -1,0 +1,176 @@
+.footer {
+    grid-column: 1 / -1;
+    height: min-content;
+    width: 100%;
+    background-color: $color-grey-dark-3;
+    position: relative;
+
+    &__text {
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        color: rgba($color-white, .5);
+        margin-bottom: 3rem;
+
+        @include respond(phone) {
+            margin-bottom: 1rem;       
+        }
+
+        &__link {
+            cursor: pointer;
+            display: inline-block;
+            transition: all .3s;
+
+            &:hover {
+                background-color: $color-grey-light-1;
+                color: $color-black;
+                box-shadow: 0 1rem 2rem rgba($color-black, .4);
+                transform: rotate(5deg) scale(1.3);
+            }
+        }
+    }
+
+    &__logo {
+        text-align: center;
+
+        border-right: .1rem solid $color-grey-dark-2;
+
+        @include respond(phone) {
+            border-right: none;
+            border-bottom: .1rem solid $color-grey-dark-2;
+        }
+
+        & figcaption {
+            font-family: $font-family;
+            text-align: center;
+            font-size: 1.5rem;
+            color: $color-grey-light-1;
+
+            @include respond(phone) {
+                padding-bottom: 2.5rem;
+            }
+        }
+
+        &__img {
+            padding-top: 1.5rem;
+            height: 14.7rem;
+        }
+    }
+
+    &__grid {
+        margin: 4.5rem 0 3rem 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 30%);
+        justify-content: center;
+
+        @include respond(phone) {
+            grid-template-columns: repeat(auto-fill, 100%);
+        }
+    }
+
+    &__contact {
+        padding-left: 7rem;
+        border-right: .1rem solid $color-grey-dark-2;
+
+        @include respond(phone) {
+            border-right: none;
+            border-bottom: .1rem solid $color-grey-dark-2;
+            padding: 2.5rem 0;
+            margin: 0 auto;
+        }
+
+        display: grid;
+        grid-template-columns: min-content max-content;
+
+        &__heading {
+            grid-column: 1 / -1;
+            font-size: 3.3rem;
+            font-weight: 600;
+            color: $color-grey-light-1;
+            text-transform: uppercase;
+        }
+
+        &__icon {
+            align-self: center;
+            padding-right: 1rem;
+            & svg {
+                height: 2rem;
+                width: 2rem;
+                fill: rgba($color-white, .7);
+                display: block;
+            }
+        }
+
+        &__subheading {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $color-grey-light-2;
+            text-transform: uppercase;
+        }
+
+        &__info {
+            font-size: 1.5rem;
+        }
+
+        &__address {
+            grid-column: 2 / -1;
+        }
+
+        &__phone {
+            grid-column: 2 / -1;
+        }
+
+        &__emailaddress {
+            grid-column: 2 / -1;
+        }
+    }
+
+    &__links {
+        padding-left: 7rem;
+
+        display: grid;
+        grid-template-columns: 2rem min-content;
+        grid-template-rows: min-content;
+
+        @include respond(phone) {
+            padding: 2.5rem 0 0 0;
+            justify-self: center;
+        }
+
+        &__heading {
+            grid-column: 1 / -1;
+            font-size: 3.3rem;
+            font-weight: 600;
+            color: $color-grey-light-1;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        &__icon {
+            align-self: center;
+            padding-right: 0;
+            & svg {
+                height: 2rem;
+                width: 2rem;
+                fill: rgba($color-white, .7);
+                display: block;
+            }
+        }
+
+        &__link {
+            cursor: pointer;
+            align-self: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $color-grey-light-2;
+            padding-left: .5rem;
+            white-space: nowrap;
+            transition: all .2s;
+
+            &:hover {
+                transform: translateX(.2rem);
+            }
+        }
+    }
+}
