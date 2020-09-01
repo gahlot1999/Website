@@ -42,32 +42,6 @@
     }
 }
 
-// @keyframes photosEntry {
-//     0% {
-//         background-image: url('/img/first_pic_comes_first.jpg'); 
-//     }
-
-//     20% {
-//         background-image: url('/img/first_pic_comes_first.jpg');   
-//     }
-    
-//     40% {
-//         background-image: url('/img/entry-3.jpg');
-//     }
-    
-//     60% {
-//         background-image: url('/img/entry-4.jpg');    
-//     }
-    
-//     80% {
-//         background-image: url('/img/entry-5.jpg');    
-//     }
-    
-//     100% {
-//         background-image: url('/img/entry-6.jpg');    
-//     }
-// }
-
 @keyframes moving {
     0% {
         transform: translateX(.3rem) translateY(.7rem);
@@ -91,5 +65,20 @@
     
     100% {
         transform: translateX(.4rem) translateY(.06rem);
+    }
+}
+
+@keyframes zigzag {
+    0% {
+        // transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        // transform: translateY(-2rem);
+        opacity: 1;
+    }
+    100% {
+        // transform: translateY(0);
+        opacity: 0;
     }
 }

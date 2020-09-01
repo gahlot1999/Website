@@ -37,28 +37,34 @@ document.querySelector('.navigation__list__mobile__button').addEventListener('cl
 /*=======================PRE LOADER===========================*/
 /*============================================================*/
 
-// $(window).on('load', function() {
-//   if ($('#preloader').length) {
-//     $('#preloader').delay(300).fadeOut('slow', function() {
-//       $(this).remove();
-//     });
-//   }
-// });
+$(window).on('load', function() {
+  if ($('#preloader').length) {
+    $('#preloader').delay(300).fadeOut('slow', function() {
+      $(this).remove();
+    });
+  }
+});
 
 /*============================================================*/
 /*=====================FIREWORKS==============================*/
 /*============================================================*/
 
-//Firework activate 
+//Firework activate
+var audio = document.getElementById('audio');
 function fireworkActivate() {
     document.querySelector('.closebtn').style.display = "block";
     document.getElementById('birthday').style.display = "block";
+    document.getElementById('canvasMsg').style.display = "block";
+    audio.play();
+    audio.loop = true;
 }
 
 //Firework Deactivate 
 function fireworkDeactivate() {
   document.querySelector('.closebtn').style.display = "none";
   document.getElementById('birthday').style.display = "none";
+  document.getElementById('canvasMsg').style.display = "none";
+  audio.pause();
 }
 
 // helper functions
