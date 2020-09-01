@@ -14,7 +14,9 @@
         margin-bottom: 3rem;
 
         @include respond(phone) {
-            margin-bottom: 1rem;       
+            margin-bottom: 1rem;
+            padding: 0 4rem;
+            font-size: 1.5rem;
         }
 
         &__link {
@@ -49,6 +51,7 @@
 
             @include respond(phone) {
                 padding-bottom: 2.5rem;
+                font-size: 1.7rem;
             }
         }
 
@@ -76,8 +79,7 @@
         @include respond(phone) {
             border-right: none;
             border-bottom: .1rem solid $color-grey-dark-2;
-            padding: 2.5rem 0;
-            margin: 0 auto;
+            padding: 2.5rem 0 2.5rem 11rem;
         }
 
         display: grid;
@@ -99,6 +101,11 @@
                 width: 2rem;
                 fill: rgba($color-white, .7);
                 display: block;
+
+                @include respond(phone) {
+                    height: 2.3rem;
+                    width: 2.3rem;
+                }
             }
         }
 
@@ -107,10 +114,18 @@
             font-weight: 600;
             color: $color-grey-light-2;
             text-transform: uppercase;
+
+            @include respond(phone) {
+                font-size: 2.35rem;
+            }
         }
 
         &__info {
             font-size: 1.5rem;
+
+            @include respond(phone) {
+                font-size: 1.8rem;
+            }
         }
 
         &__address {
@@ -134,8 +149,7 @@
         grid-template-rows: min-content;
 
         @include respond(phone) {
-            padding: 2.5rem 0 0 0;
-            justify-self: center;
+            padding: 2.5rem 0 0 11rem;
         }
 
         &__heading {
@@ -170,6 +184,11 @@
 
             &:hover {
                 transform: translateX(.2rem);
+            }
+
+            @include respond(phone) {
+                font-size: 2.3rem;
+                font-weight: 500;
             }
         }
     }

@@ -224,7 +224,9 @@ canvas {
     margin-bottom: 3rem; }
     @media only screen and (max-width: 37.5em) {
       .footer__text {
-        margin-bottom: 1rem; } }
+        margin-bottom: 1rem;
+        padding: 0 4rem;
+        font-size: 1.5rem; } }
     .footer__text__link {
       cursor: pointer;
       display: inline-block;
@@ -248,7 +250,8 @@ canvas {
       color: #f7f7f7; }
       @media only screen and (max-width: 37.5em) {
         .footer__logo figcaption {
-          padding-bottom: 2.5rem; } }
+          padding-bottom: 2.5rem;
+          font-size: 1.7rem; } }
     .footer__logo__img {
       padding-top: 1.5rem;
       height: 14.7rem; }
@@ -269,8 +272,7 @@ canvas {
       .footer__contact {
         border-right: none;
         border-bottom: 0.1rem solid #999;
-        padding: 2.5rem 0;
-        margin: 0 auto; } }
+        padding: 2.5rem 0 2.5rem 11rem; } }
     .footer__contact__heading {
       grid-column: 1 / -1;
       font-size: 3.3rem;
@@ -285,13 +287,23 @@ canvas {
         width: 2rem;
         fill: rgba(255, 255, 255, 0.7);
         display: block; }
+        @media only screen and (max-width: 37.5em) {
+          .footer__contact__icon svg {
+            height: 2.3rem;
+            width: 2.3rem; } }
     .footer__contact__subheading {
       font-size: 1.8rem;
       font-weight: 600;
       color: #eee;
       text-transform: uppercase; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__contact__subheading {
+          font-size: 2.35rem; } }
     .footer__contact__info {
       font-size: 1.5rem; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__contact__info {
+          font-size: 1.8rem; } }
     .footer__contact__address {
       grid-column: 2 / -1; }
     .footer__contact__phone {
@@ -305,8 +317,7 @@ canvas {
     grid-template-rows: min-content; }
     @media only screen and (max-width: 37.5em) {
       .footer__links {
-        padding: 2.5rem 0 0 0;
-        justify-self: center; } }
+        padding: 2.5rem 0 0 11rem; } }
     .footer__links__heading {
       grid-column: 1 / -1;
       font-size: 3.3rem;
@@ -333,6 +344,10 @@ canvas {
       transition: all .2s; }
       .footer__links__link:hover {
         transform: translateX(0.2rem); }
+      @media only screen and (max-width: 37.5em) {
+        .footer__links__link {
+          font-size: 2.3rem;
+          font-weight: 500; } }
 
 .container {
   display: grid;
