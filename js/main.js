@@ -227,6 +227,44 @@ document.ontouchstart = evt => birthday.onClick(evt)
   })()
 
 /*============================================================*/
+/*========================AUDIO===============================*/
+/*============================================================*/
+
+var audio1 = document.getElementById('songOne');
+var audio2 = document.getElementById('songTwo');
+var audio3 = document.getElementById('songThree');
+var audio4 = document.getElementById('songFour');
+
+function songOne() {
+  audio1.play();
+  audio2.pause();
+  audio3.pause();
+  audio4.pause();
+}
+
+function songTwo() {
+  audio1.pause();
+  audio2.play();
+  audio3.pause();
+  audio4.pause();
+}
+
+function songThree() {
+  audio1.pause();
+  audio2.pause();
+  audio3.play();
+  audio4.pause();
+}
+
+function songFour() {
+  audio1.pause();
+  audio2.pause();
+  audio3.pause();
+  audio4.play();
+}
+
+
+/*============================================================*/
 /*=====================ENTRY TEXT=============================*/
 /*============================================================*/
 
